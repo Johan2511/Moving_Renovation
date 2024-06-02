@@ -1,0 +1,13 @@
+.contact {
+    margin-block-end: 5em;
+}
+
+#truco {
+    opacity: 0;
+}
+
+.u-wrapper {
+    max-inline-size: 1232px;
+    margin: 0 auto;
+    padding: 0 1em;
+}

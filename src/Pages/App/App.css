@@ -1,0 +1,35 @@
+/* Estilos para el modo claro */
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para el modo oscuro */
+.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark button.toggle-btn {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Estilos para el botón de alternar modo */
+.toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}

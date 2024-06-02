@@ -1,0 +1,25 @@
+ 
+  .preview {
+    position: absolute;
+    margin-left: 2px;
+    width: 380px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  .preview img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .preview p {
+    margin: 0;
+  }
+  

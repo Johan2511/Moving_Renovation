@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="contact">
+        <div class="u-wrapper">
+            <div class="contact-content">
+                <form id="form" action="" class="form">
+                    <h3 class="tag" >Get your moving quote for free</h3>
+                    <label for="movingFrom">Moving From</label>
+                    <input
+                    type="text"
+                    name="movingFrom"
+                    placeholder="Moving From"
+                    required
+                    />
+
+                    <label for="movingTo">Moving To</label>
+                    <input
+                    type="text"
+                    name="movingTo"
+                    placeholder="Moving To"
+                    />
+
+                    <label for="moveDate">Move Date</label>
+                    <input
+                    type="text"
+                    name="moveDate"
+                    placeholder="Move Date"
+                    readOnly
+                    />
+
+                    <label for="name">Your Name</label>
+                    <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your Name"
+                    />
+
+                    <label for="email">Your Email</label>
+                    <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Your Email"
+                    />
+
+                    <label for="phoneNumber"> Your Phone Number</label>
+                    <input
+                    type="tel"
+                    name="phoneNumber"
+                    onChange={handleInputChange}
+                    placeholder="Your Phone Number"
+                />
+
+                    <label for="referralSource">Where did you hear about us?</label>
+                    <input
+                    type="text"
+                    name="referralSource"
+                    placeholder="Where did you hear about us?"
+                    />
+
+                    <textarea
+                    id="description"
+                    name="description"
+                    cols="30"
+                    rows="10"
+                    placeholder="Description"
+                    />
+
+                    <button type="submit" class="btn primary full">Submit</button>
+                </form>
+                <a href="mailto:johanpenuelah@gmail.com" id="truco">mail</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const $form = document.querySelector('#form')
+        const $buttonMailto = document.querySelector('#truco')
+
+        $form.addEventListener('submit', handleSubmit )
+
+        function handleSubmit (e) {
+            e.preventDefault()
+            const form = new FormData(this)
+            const movingFrom = encodeURIComponent(form.get('movingFrom'));
+            const movingTo = encodeURIComponent(form.get('movingTo'));
+            const moveDate = encodeURIComponent(form.get('moveDate'));
+            const phoneNumber = encodeURIComponent(form.get('phoneNumber'));
+            const referralSource = encodeURIComponent(form.get('referralSource'));
+            const name = encodeURIComponent(form.get('name'));
+            const email = encodeURIComponent(form.get('email'));
+            const description = encodeURIComponent(form.get('description'));
+
+            const body = `Moving From: ${movingFrom}%0D%0A` +
+                 `Moving To: ${movingTo}%0D%0A` +
+                 `Move Date: ${moveDate}%0D%0A` +
+                 `Phone Number: ${phoneNumber}%0D%0A` +
+                 `Referral Source: ${referralSource}%0D%0A%0D%0A` +
+                 `Name: ${name}%0D%0A` +
+                 `Email: ${email}%0D%0A%0D%0A` +
+                 `Description: ${description}`;
+
+            const mailtoLink = `mailto:johanpenuelah@gmail.com?subject=${name} ${email}&body=${body}`;
+            $buttonMailto.setAttribute('href', mailtoLink);
+            $buttonMailto.click();
+        }
+    </script>
+</body>
+</html>
