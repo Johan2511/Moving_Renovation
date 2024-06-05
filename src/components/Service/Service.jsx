@@ -19,18 +19,18 @@ const servicesData = [
   {
     title: 'Apartment Moving',
     description: 'Apartment moving service.',
-    previewDescription: '3rd floor to 3rd floor? Let our guys do the hard work.',
+    previewDescription: 'Moving from the third floor to the third floor? Let our team handle the heavy lifting.',
     slug: '/my-service/apartment',
     icon: PiBuildingApartmentDuotone,
-    image: '/assets/apartment.jpg'
+    image: '/src/assets/apartment_moving.jpg'
   },
   {
     title: 'Commercial Moving',
     description: 'Commercial moving service.',
-    previewDescription: 'No office is too big or small.',
+    previewDescription: 'No office is too big or small. Our expert team handles every detail to ensure a smooth transition for your business..',
     slug: '/my-service/commercial',
     icon: RiTruckLine,
-    image: '/assets/commercial.jpg'
+    image: '/src/assets/moving_comercial.jpg'
   },
   {
     title: 'Long Distance Moving',
@@ -47,8 +47,8 @@ const servicesData = [
     image: '/assets/furniture.jpg'
   },
   {
-    title: 'Item Loading',
-    description: 'Loading service.',
+    title: 'Item Junk Moving',
+    description: 'Junk Moving service.',
     slug: 'item-loading',
     icon: FaTruckLoading,
     image: '/assets/loading.jpg'
@@ -120,7 +120,7 @@ const Service = () => {
                 <service.icon className="text-6xl text-gray-500 mr-2" style={{ color: 'orange' }} />
                 <div>
                   <h3 className="text-3xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-1xl text-gray-700">{service.description}</p>
+                  <p className="text-base text-gray-700">{service.description}</p>
                 </div>
               </div>
             </Link>

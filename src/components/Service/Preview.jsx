@@ -1,4 +1,3 @@
-// src/components/Preview.js
 import React from 'react';
 import './Preview.css';
 

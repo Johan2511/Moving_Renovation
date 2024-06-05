@@ -11,8 +11,8 @@ const Footer = () => {
     
 ]
   return (
-    <div className='bg-orange-400'>
-      <footer className="text-white bg-orange-400 px-4 py-5 max-w-screen-xl mx-auto md:px-8">
+    
+      <footer className="text-white bg-orange-500 px-4 py-5   ">
             <div className="max-w-lg sm:mx-auto sm:text-center text-center ">
                   <Logo />
                 <p className="leading-relaxed mt-2 text-[15px]">
@@ -31,8 +31,8 @@ const Footer = () => {
                     ))
                 }
             </ul>
-            <div className="bg-white rounded-xl p-4 mt-8 items-center justify-between sm:flex">
-                <div className="mt-4 sm:mt-0 text-black text-center">
+            <div className="bg-slate-800 rounded-lg p-4 mt-8 items-center justify-between sm:flex w-full">
+                <div className="mt-4 sm:mt-0 text-white text-center">
                     &copy; 2024 Moving_Renovation All rights reserved.
                 </div>
                 <div className="mt-6 sm:mt-0">
@@ -40,7 +40,7 @@ const Footer = () => {
                 </div>
             </div>
       </footer>
-    </div>
+    
   );
 };
 

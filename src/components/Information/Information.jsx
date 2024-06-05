@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '../ButtonCall/ButtonCall';
 import './information.css'; 
 
-const Information = ({backgroundMedia, mediaContent, title, paragraph, paragraph2, paragraph3, buttonText, buttonLink, mediaType}) => {
+const Information = ({backgroundMedia, mediaContent, title, paragraph, paragraph2, paragraph3, paragraph4, buttonText, buttonLink, mediaType}) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
   
@@ -48,13 +48,18 @@ const Information = ({backgroundMedia, mediaContent, title, paragraph, paragraph
   };
 
   return (
-    <section className="body-font bg-cover bg-center" style={{backgroundImage: `url(${backgroundMedia})`, height: 'auto'}}>
+    <section className="body-font gradient-bg" style={{backgroundImage: `url(${backgroundMedia})`,
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center', 
+    backgroundRepeat: 'no-repeat', 
+    minHeight: '90vh' }}>
       <div className="container mx-auto px-5 py-24 lg:flex lg:flex-row flex-col items-center justify-start">
         <div className="lg:w-1/2 md:w-full w-full lg:pl-24 md:pl-16 flex flex-col md:items-start items-start text-left mb-16 lg:mb-0 lg:mr-8">
-        <h2 ref={elementRef} className={`title-font text-center sm:text-5xl lg:text-7xl text-4xl mb-4 font-extrabold text-orange-400 ${isVisible ? 'title-animation' : ''}`}>{title}</h2>
-          <p className="mb-6 leading-relaxed font-semibold text-base text-gray-600">{paragraph}</p>
-          <p className="mb-6 leading-relaxed font-semibold text-base text-gray-600">{paragraph2}</p>
-          <p className="mb-6 leading-relaxed font-semibold text-base text-gray-600">{paragraph3}</p>
+          <h2 ref={elementRef} className={`title-font text-center sm:text-5xl lg:text-7xl text-4xl mb-4 font-extrabold text-orange-400 ${isVisible ? 'title-animation' : ''}`}>{title}</h2>
+          <p className="mb-6 leading-relaxed text-base md:text-2xl text-gray-600">{paragraph}</p>
+          <p className="mb-6 leading-relaxed text-base md:text-2xl text-gray-600">{paragraph2}</p>
+          <p className="mb-6 leading-relaxed text-base md:text-2xl text-gray-600">{paragraph3}</p>
+          <p className="mb-6 leading-relaxed text-base md:text-2xl text-gray-600">{paragraph4}</p>
           <Button link={buttonLink} text={buttonText} />
         </div>
         <div className="lg:w-1/3 lg:justify-end">
@@ -78,3 +83,4 @@ Information.propTypes = {
 };
 
 export default Information;
+

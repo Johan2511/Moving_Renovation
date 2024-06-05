@@ -5,7 +5,10 @@ import Footer from '../../components/Footer/Footer';
 import HeroSection from '../../components/Hero/Hero';
 import AboutUsImg from '../../assets/AboutUs.jpg';
 import AboutUs2Img from '../../assets/nosotros.webp';
+import HeroImg from "../../assets/information.jpg"
 import Information from '../../components/Information/Information';
+import AboutUs from '../../components/AboutUs/AboutUs';
+import GallerySection from '../../components/Gallery/Gallery';
 
 const AboutPage = () => {
   return (
@@ -20,6 +23,7 @@ const AboutPage = () => {
             buttonLink="tel:6789733935"
         />
         <Information
+            backgroundMedia={HeroImg}
             mediaContent={AboutUs2Img} 
             title='OUR PROMISE TO YOU'
             paragraph='Our focus is to make your move as affordable and stress-free as possible by hiring professional and trainable young men who will always work hard to provide excellent customer service.'
@@ -27,6 +31,8 @@ const AboutPage = () => {
             buttonLink="tel:6789733935"
             mediaType="image"
         />
+        <AboutUs />
+        <GallerySection />
         <Footer />
     </div>
   );

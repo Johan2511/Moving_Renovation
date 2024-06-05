@@ -17,5 +17,9 @@
     filter: grayscale(50%);
   }
   
+  .gradient-bg {
+    background: linear-gradient(135deg, #FFA500, #FFFFFF);
+  }
+  
   
   

@@ -1,11 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
-import nosotrosimg from '../../assets/nosotros.webp'
-import nosotros2img from '../../assets/nosotros2.webp'
-import nosotros3img from '../../assets/nosotros3.webp'
-
+import server from '../../assets/Server.jpg';
+import payment from '../../assets/payment.jpg';
+import communication from '../../assets/communication.jpg';
 
 const GallerySection = () => {
-
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
 
@@ -20,7 +18,7 @@ const GallerySection = () => {
     }, {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5 // Cuando al menos la mitad del elemento es visible
+      threshold: 0.5
     });
 
     if (elementRef.current) {
@@ -38,13 +36,17 @@ const GallerySection = () => {
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-        <h2 ref={elementRef} className={`title-font text-center sm:text-5xl lg:text-6xl text-4xl mb-4 font-extrabold text-orange-400 ${isVisible ? 'title-animation' : ''}`} >WHY CHOOSE MOVING_RENOVATION</h2>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">There is no one you can trust like the crew at Moving_Renovation. With a team of professional, trustworthy and clean-cut young men, we provide a dependable and stress-free experience from point A to point B.</p>
+          <h2 ref={elementRef} className={`title-font text-center md:text-4xl lg:text-6xl text-3xl mb-4 font-extrabold text-orange-400 ${isVisible ? 'title-animation' : ''}`}>
+            WHY CHOOSE MOVING_RENOVATION
+          </h2>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base lg:text-2xl">
+            There is no one you can trust like the crew at Moving_Renovation. With a team of professional, trustworthy and clean-cut young men, we provide a dependable and stress-free experience from point A to point B.
+          </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          <GalleryItem imgSrc={nosotrosimg} title="CUSTOMER SERVICE" description="Our main goal is to provide you with a stress-free journey. We guarantee that our movers will do everything in their power to complete your move quickly and efficiently." />
-          <GalleryItem imgSrc={nosotros2img} title="PAYMENT" description="You only pay for the minutes our moving helpers work. This means that you will not be required to pay on the day of your move. There are no hidden costs." />
-          <GalleryItem imgSrc={nosotros3img} title="COMMUNICATION" description="We send confirmation messages via text and email to verify your moving time, moving date, and hourly rates. Additionally, we'll give you a call when the crew is on its way." />
+          <GalleryItem imgSrc={server} title="CUSTOMER SERVICE" description="Our main goal is to provide you with a stress-free journey. We guarantee that our movers will do everything in their power to complete your move quickly and efficiently." />
+          <GalleryItem imgSrc={payment} title="PAYMENT" description="You only pay for the minutes our moving helpers work. This means that you will not be required to pay on the day of your move. There are no hidden costs." />
+          <GalleryItem imgSrc={communication} title="COMMUNICATION" description="We send confirmation messages via text and email to verify your moving time, moving date, and hourly rates. Additionally, we'll give you a call when the crew is on its way." />
         </div>
       </div>
     </section>
@@ -54,19 +56,102 @@ const GallerySection = () => {
 const GalleryItem = ({ imgSrc, title, description }) => {
   return (
     <div className="lg:w-1/3 sm:w-1/2 p-4">
-      <div className="flex flex-col h-full border-4 border-gray-200 bg-white transition duration-300 hover:shadow-lg">
-        <img alt={title} className="w-full h-80 object-cover object-center" src={imgSrc} />
-        <div className="p-8">
+      <div className="flex flex-col h-full border-4 border-gray-200 bg-white transition duration-300 hover:shadow-2xl transform hover:-translate-y-2">
+        <div className="relative overflow-hidden">
+          <img alt={title} className="w-full h-80 object-cover object-center transition duration-500 transform hover:scale-110" src={imgSrc} />
+        </div>
+        <div className="p-6 flex-grow">
           <h2 className="tracking-widest text-sm title-font font-medium text-yellow-500 mb-1">{title}</h2>
-          <p className="leading-relaxed">{description}</p>
+          <p className="leading-relaxed lg:text-xl">{description}</p>
         </div>
       </div>
     </div>
   );
-
 };
 
 export default GallerySection;
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useRef, useEffect, useState } from 'react';
+// // import nosotrosimg from '../../assets/nosotros.webp'
+// import server from '../../assets/Server.jpg'
+// import payment from '../../assets/payment.jpg'
+// import communication from '../../assets/communication.jpg'
+
+
+// const GallerySection = () => {
+
+//   const [isVisible, setIsVisible] = useState(false);
+//   const elementRef = useRef(null);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver((entries) => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           setIsVisible(true);
+//           observer.unobserve(entry.target);
+//         }
+//       });
+//     }, {
+//       root: null,
+//       rootMargin: '0px',
+//       threshold: 0.5 // Cuando al menos la mitad del elemento es visible
+//     });
+
+//     if (elementRef.current) {
+//       observer.observe(elementRef.current);
+//     }
+
+//     return () => {
+//       if (elementRef.current) {
+//         observer.unobserve(elementRef.current);
+//       }
+//     };
+//   }, []);
+  
+//   return (
+//     <section className="text-gray-600 body-font">
+//       <div className="container px-5 py-24 mx-auto">
+//         <div className="flex flex-col text-center w-full mb-20">
+//         <h2 ref={elementRef} className={`title-font text-center md:text-4xl lg:text-6xl text-3xl mb-4 font-extrabold text-orange-400 ${isVisible ? 'title-animation' : ''}`} >WHY CHOOSE MOVING_RENOVATION</h2>
+//           <p className="lg:w-2/3 mx-auto leading-relaxed text-base lg:text-2xl">There is no one you can trust like the crew at Moving_Renovation. With a team of professional, trustworthy and clean-cut young men, we provide a dependable and stress-free experience from point A to point B.</p>
+//         </div>
+//         <div className="flex flex-wrap -m-4">
+//           <GalleryItem imgSrc={server} title="CUSTOMER SERVICE" description="Our main goal is to provide you with a stress-free journey. We guarantee that our movers will do everything in their power to complete your move quickly and efficiently." />
+//           <GalleryItem imgSrc={payment} title="PAYMENT" description="You only pay for the minutes our moving helpers work. This means that you will not be required to pay on the day of your move. There are no hidden costs." />
+//           <GalleryItem imgSrc={communication} title="COMMUNICATION" description="We send confirmation messages via text and email to verify your moving time, moving date, and hourly rates. Additionally, we'll give you a call when the crew is on its way." />
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// const GalleryItem = ({ imgSrc, title, description }) => {
+//   return (
+//     <div className="lg:w-1/3 sm:w-1/2 p-4">
+//       <div className="flex flex-col h-full border-4 border-gray-200 bg-white transition duration-300 hover:shadow-lg">
+//         <img alt={title} className="w-full h-80 object-cover object-center" src={imgSrc} />
+//         <div className="p-8">
+//           <h2 className="tracking-widest text-sm title-font font-medium text-yellow-500 mb-1">{title}</h2>
+//           <p className="leading-relaxed lg:text-2xl">{description}</p>
+//         </div>
+//       </div>
+//     </div>
+//   );
+
+// };
+
+// export default GallerySection;
 
 
 

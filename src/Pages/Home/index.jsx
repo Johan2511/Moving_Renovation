@@ -6,9 +6,8 @@ import ContactSection from "../../components/ContactSection/ContactSection"
 import LocationList from '../../components/LocationList/LocationList'
 import Information from "../../components/Information/Information"
 import Footer from "../../components/Footer/Footer"
-import HeroImg from "../../assets/Moving_renovation_Hero.png"
 import HeroI from "../../assets/Hero.jpg"
-import MovingVideo from "../../assets/Moving_Renovation_video.mp4"
+import MovingVideo from "../../assets/HomePage.mp4"
 import Service from "../../components/Service/Service"
 
 const Home = () => {
@@ -43,7 +42,8 @@ const Home = () => {
             buttonLink="tel:6789733935" 
             />
             <GallerySection />
-            <Information 
+            <Information
+
             mediaContent={MovingVideo}
             title='WELCOME TO MOVING RENOVATION'
             paragraph='We offer furniture pads, dollies, moving straps, shrink wrap, and the tools you need for a professional move. We only start the clock when we arrive at your home and  stop it when we have completely completed our work at your destination. 

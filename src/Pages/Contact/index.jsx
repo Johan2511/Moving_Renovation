@@ -4,7 +4,7 @@ import HeroSection from "../../components/Hero/Hero"
 import ContactSection from "../../components/ContactSection/ContactSection"
 import ContactMethods from "../../components/ContactSection/ContactMethods"
 import Footer from "../../components/Footer/Footer"
-import ContactImg from "../../assets/nosotros.webp"
+import ContactImg from "../../assets/moving_contact.jpg"
 
 const Contact = () => {
 
