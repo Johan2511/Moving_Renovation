@@ -9,6 +9,8 @@ import Commercial from '../Services/commercial.jsx';
 import Apartment from '../Services/apartment.jsx';
 import LongDistanceMoving from '../Services/LongDistanceMoving.jsx';
 import FurnitureAssembly from '../Services/furnitureAssembly.jsx';
+import ItemLoadingServices from '../Services/ItemLoadingServices.jsx';
+import PackingUnpacking from '../Services/PackingUnpacking';
 import AboutPage from '../Nosotros/index.jsx';
 import Contact from '../Contact/index.jsx';
 
@@ -21,6 +23,8 @@ const AppRoutes = () => {
     { path: '/my-service/apartment', element: <Apartment /> },
     { path: '/my-service/longDistanceMoving', element: <LongDistanceMoving /> },
     { path: '/my-service/furniture-assembly', element: <FurnitureAssembly /> },
+    { path: '/my-service/ItemLoadingServices', element: <ItemLoadingServices /> },
+    { path: '/my-service/packingUnpacking', element: <PackingUnpacking /> },
     { path: '/AboutUs', element: <AboutPage /> },
     { path: '/ContactUS', element: <Contact /> }
   ])

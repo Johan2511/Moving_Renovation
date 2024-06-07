@@ -44,9 +44,9 @@ const GallerySection = () => {
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          <GalleryItem imgSrc={server} title="CUSTOMER SERVICE" description="Our main goal is to provide you with a stress-free journey. We guarantee that our movers will do everything in their power to complete your move quickly and efficiently." />
-          <GalleryItem imgSrc={payment} title="PAYMENT" description="You only pay for the minutes our moving helpers work. This means that you will not be required to pay on the day of your move. There are no hidden costs." />
-          <GalleryItem imgSrc={communication} title="COMMUNICATION" description="We send confirmation messages via text and email to verify your moving time, moving date, and hourly rates. Additionally, we'll give you a call when the crew is on its way." />
+          <GalleryItem imgSrc={isVisible ? server : ''} title="CUSTOMER SERVICE" description="Our main goal is to provide you with a stress-free journey. We guarantee that our movers will do everything in their power to complete your move quickly and efficiently." />
+          <GalleryItem imgSrc={isVisible ? payment : ''} title="PAYMENT" description="You only pay for the minutes our moving helpers work. This means that you will not be required to pay on the day of your move. There are no hidden costs." />
+          <GalleryItem imgSrc={isVisible ? communication : ''} title="COMMUNICATION" description="We send confirmation messages via text and email to verify your moving time, moving date, and hourly rates. Additionally, we'll give you a call when the crew is on its way." />
         </div>
       </div>
     </section>
@@ -70,6 +70,7 @@ const GalleryItem = ({ imgSrc, title, description }) => {
 };
 
 export default GallerySection;
+
 
 
 

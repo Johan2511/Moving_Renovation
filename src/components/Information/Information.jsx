@@ -77,6 +77,7 @@ Information.propTypes = {
   paragraph: PropTypes.string.isRequired,
   paragraph2: PropTypes.string.isRequired,
   paragraph3: PropTypes.string.isRequired,
+  paragraph4: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
   buttonLink: PropTypes.string.isRequired,
   mediaType: PropTypes.oneOf(['image', 'video']).isRequired

@@ -72,6 +72,12 @@ const NavBar = () => {
                                     <li>
                                         <Link to="/my-service/furniture-assembly" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Furniture Assembly</Link>
                                     </li>
+                                    <li>
+                                        <Link to="/my-service/ItemLoadingServices" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Item Junk Moving</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/my-service/packingUnpacking" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Packing / Unpacking</Link>
+                                    </li>
                                 </ul>
                             </div>
                         </li>

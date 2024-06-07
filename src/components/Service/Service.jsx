@@ -35,30 +35,33 @@ const servicesData = [
   {
     title: 'Long Distance Moving',
     description: 'Long-distance moving service.',
-    slug: 'long-distance-moving',
+    previewDescription:'While we specialize in moves within Atlanta, we are equally prepared and excited to assist with your long-distance relocations.',
+    slug: '/my-service/longDistanceMoving',
     icon: FaMapMarkedAlt,
-    image: '/assets/long-distance.jpg'
+    image: '/src/assets/LongDistanceMoving.jpg'
   },
   {
     title: 'Furniture Assembly Moving',
     description: 'Furniture assembly and moving service.',
+    previewDescription:'We’re here to make your furniture assembly hassle-free. From beds to IKEA furniture, let us handle it for you.',
     slug: '/my-service/furniture-assembly',
     icon: PiArmchair,
-    image: '/assets/furniture.jpg'
+    image: '/src/assets/Assembly_moving.jpg'
   },
   {
     title: 'Item Junk Moving',
     description: 'Junk Moving service.',
-    slug: 'item-loading',
+    previewDescription:'We specialize in the efficient and responsible removal of unwanted items, ensuring your space is clutter-free and clean.',
+    slug: '/my-service/ItemLoadingServices',
     icon: FaTruckLoading,
-    image: '/assets/loading.jpg'
+    image: '/src/assets/ItemJunkMoving.jpg'
   },
   {
     title: 'Packing / Unpacking',
     description: 'Packing and unpacking service.',
-    slug: 'packing-unpacking',
+    slug: '/my-service/packingUnpacking',
     icon: FaBoxesPacking,
-    image: '/assets/packing.jpg'
+    image: '/src/assets/packing.jpg'
   }
 ];
 
