@@ -33,3 +33,8 @@ body {
 .toggle-btn:hover {
   background-color: #0056b3;
 }
+
+.title-animation {
+  color: white; 
+
+}

@@ -43,11 +43,14 @@ const Home = () => {
             />
             <GallerySection />
             <Information
-
+            backgroundMedia=""
             mediaContent={MovingVideo}
             title='WELCOME TO MOVING RENOVATION'
             paragraph='We offer furniture pads, dollies, moving straps, shrink wrap, and the tools you need for a professional move. We only start the clock when we arrive at your home and  stop it when we have completely completed our work at your destination. 
             We make your next move less stressful by providing superior customer service and satisfaction throughout Georgia.'
+            paragraph2=""
+            paragraph3=""
+            paragraph4=""
             buttonText="Call Us Now At 678-973-3935"
             buttonLink="tel:6789733935"
             mediaType="video" />

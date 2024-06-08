@@ -5,7 +5,6 @@ import HeroSection from '../../components/Hero/Hero';
 import Information from '../../components/Information/Information';
 import GallerySection from "../../components/Gallery/Gallery"
 import ResidentialImg from "../../assets/residential_moving.jpg"
-import HeroImg from "../../assets/information.jpg"
 import Footer from '../../components/Footer/Footer';
 
 const Residential = () => {
@@ -21,7 +20,7 @@ const Residential = () => {
         buttonLink="tel:6789733935" 
         />
         <Information
-        // backgroundMedia={HeroImg}
+        backgroundMedia=''
         mediaContent={ResidentialImg}
         title='BEST RESIDENTIAL MOVERS IN ATLANTA'
         paragraph='
@@ -31,7 +30,7 @@ const Residential = () => {
         paragraph4=' Moving can be a stressful time; let us help make it easier. Give us a call or take advantage of our convenient online booking!'
         buttonText="Call Us Now At 678-973-3935"
         buttonLink="tel:6789733935"
-        mediaType={ResidentialImg} />
+        mediaType='image' />
         <GallerySection />
         <Footer />
     </div>

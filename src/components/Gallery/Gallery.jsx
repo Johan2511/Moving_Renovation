@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import server from '../../assets/Server.jpg';
 import payment from '../../assets/payment.jpg';
 import communication from '../../assets/communication.jpg';
@@ -44,21 +46,28 @@ const GallerySection = () => {
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          <GalleryItem imgSrc={isVisible ? server : ''} title="CUSTOMER SERVICE" description="Our main goal is to provide you with a stress-free journey. We guarantee that our movers will do everything in their power to complete your move quickly and efficiently." />
-          <GalleryItem imgSrc={isVisible ? payment : ''} title="PAYMENT" description="You only pay for the minutes our moving helpers work. This means that you will not be required to pay on the day of your move. There are no hidden costs." />
-          <GalleryItem imgSrc={isVisible ? communication : ''} title="COMMUNICATION" description="We send confirmation messages via text and email to verify your moving time, moving date, and hourly rates. Additionally, we'll give you a call when the crew is on its way." />
+          <GalleryItem imgSrc={server} isVisible={isVisible} title="CUSTOMER SERVICE" description="Our main goal is to provide you with a stress-free journey. We guarantee that our movers will do everything in their power to complete your move quickly and efficiently." />
+          <GalleryItem imgSrc={payment} isVisible={isVisible} title="PAYMENT" description="You only pay for the minutes our moving helpers work. This means that you will not be required to pay on the day of your move. There are no hidden costs." />
+          <GalleryItem imgSrc={communication} isVisible={isVisible} title="COMMUNICATION" description="We send confirmation messages via text and email to verify your moving time, moving date, and hourly rates. Additionally, we'll give you a call when the crew is on its way." />
         </div>
       </div>
     </section>
   );
 };
 
-const GalleryItem = ({ imgSrc, title, description }) => {
+const GalleryItem = ({ imgSrc, isVisible, title, description }) => {
   return (
     <div className="lg:w-1/3 sm:w-1/2 p-4">
       <div className="flex flex-col h-full border-4 border-gray-200 bg-white transition duration-300 hover:shadow-2xl transform hover:-translate-y-2">
         <div className="relative overflow-hidden">
-          <img alt={title} className="w-full h-80 object-cover object-center transition duration-500 transform hover:scale-110" src={imgSrc} />
+          {isVisible && (
+            <LazyLoadImage
+              alt={title}
+              src={imgSrc}
+              effect="blur"
+              className="w-full h-full object-cover object-center transition duration-500 transform hover:scale-110"
+            />
+          )}
         </div>
         <div className="p-6 flex-grow">
           <h2 className="tracking-widest text-sm title-font font-medium text-yellow-500 mb-1">{title}</h2>
@@ -70,6 +79,7 @@ const GalleryItem = ({ imgSrc, title, description }) => {
 };
 
 export default GallerySection;
+
 
 
 

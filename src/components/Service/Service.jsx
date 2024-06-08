@@ -1,4 +1,3 @@
-// src/Service.js
 import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PiHouseLineDuotone, PiBuildingApartmentDuotone, PiArmchair } from "react-icons/pi";
@@ -59,6 +58,7 @@ const servicesData = [
   {
     title: 'Packing / Unpacking',
     description: 'Packing and unpacking service.',
+    previewDescription: 'Packing for a move can be challenging, but with our expert assistance, it becomes a seamless experience.',
     slug: '/my-service/packingUnpacking',
     icon: FaBoxesPacking,
     image: '/src/assets/packing.jpg'
@@ -136,3 +136,4 @@ const Service = () => {
 };
 
 export default Service;
+

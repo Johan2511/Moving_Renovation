@@ -20,7 +20,8 @@ const Apartment = () => {
         buttonText="Call Us Now At 678-973-3935"
         buttonLink="tel:6789733935" 
         />
-        <Information 
+        <Information
+        backgroundMedia=''
         mediaContent={MovingVideo}
         title='TRUSTWORTHY APARTMENT MOVERS IN ATLANTA'
         paragraph="At Moving Renovation Atlanta, our knowledgeable and athletic movers will take care of your next move. We handle all the hard work for you, ensuring a smooth and efficient transition for your condo or apartment."

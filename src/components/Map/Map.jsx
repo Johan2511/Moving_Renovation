@@ -27,7 +27,7 @@ const Map = () => {
         .bindPopup('Moving_Renovation')
         .openPopup();
 
-        // Agrega un evento de clic al marcador para abrir Google Maps en una nueva pestaña
+      // Agrega un evento de clic al marcador para abrir Google Maps en una nueva pestaña
       marker.on('click', () => {
         window.open('https://www.google.com/maps?q=33.9256381,-84.1276978', '_blank');
       });
@@ -42,3 +42,5 @@ const Map = () => {
 };
 
 export default Map;
+
+

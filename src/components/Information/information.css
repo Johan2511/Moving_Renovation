@@ -21,5 +21,12 @@
     background: linear-gradient(135deg, #FFA500, #FFFFFF);
   }
   
+  .information-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+  }
+  
   
   

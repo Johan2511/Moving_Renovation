@@ -1,9 +1,22 @@
 import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Button from '../ButtonCall/ButtonCall';
-import './information.css'; 
+import './information.css';
 
-const Information = ({backgroundMedia, mediaContent, title, paragraph, paragraph2, paragraph3, paragraph4, buttonText, buttonLink, mediaType}) => {
+const Information = ({ 
+  backgroundMedia, 
+  mediaContent, 
+  title, 
+  paragraph, 
+  paragraph2, 
+  paragraph3, 
+  paragraph4, 
+  buttonText, 
+  buttonLink, 
+  mediaType 
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
   
@@ -42,24 +55,26 @@ const Information = ({backgroundMedia, mediaContent, title, paragraph, paragraph
       );
     } else {
       return (
-        <img alt="" className="media-filter w-full h-full object-cover object-center" src={mediaContent} />
+        <LazyLoadImage
+          alt=""
+          src={mediaContent}
+          effect="blur"
+          threshold={10}
+          className="media-filter w-full h-full object-cover object-center"
+        />
       );
     }
   };
 
   return (
-    <section className="body-font gradient-bg" style={{backgroundImage: `url(${backgroundMedia})`,
-    backgroundSize: 'cover', 
-    backgroundPosition: 'center', 
-    backgroundRepeat: 'no-repeat', 
-    minHeight: '90vh' }}>
+    <section className="body-font gradient-bg information-section" style={{backgroundImage: `url(${backgroundMedia})`}}>
       <div className="container mx-auto px-5 py-24 lg:flex lg:flex-row flex-col items-center justify-start">
         <div className="lg:w-1/2 md:w-full w-full lg:pl-24 md:pl-16 flex flex-col md:items-start items-start text-left mb-16 lg:mb-0 lg:mr-8">
           <h2 ref={elementRef} className={`title-font text-center sm:text-5xl lg:text-7xl text-4xl mb-4 font-extrabold text-orange-400 ${isVisible ? 'title-animation' : ''}`}>{title}</h2>
           <p className="mb-6 leading-relaxed text-base md:text-2xl text-gray-600">{paragraph}</p>
           <p className="mb-6 leading-relaxed text-base md:text-2xl text-gray-600">{paragraph2}</p>
           <p className="mb-6 leading-relaxed text-base md:text-2xl text-gray-600">{paragraph3}</p>
-          <p className="mb-6 leading-relaxed text-base md:text-2xl text-gray-600">{paragraph4}</p>
+          {paragraph4 && <p className="mb-6 leading-relaxed text-base md:text-2xl text-gray-600">{paragraph4}</p>}
           <Button link={buttonLink} text={buttonText} />
         </div>
         <div className="lg:w-1/3 lg:justify-end">
@@ -77,11 +92,12 @@ Information.propTypes = {
   paragraph: PropTypes.string.isRequired,
   paragraph2: PropTypes.string.isRequired,
   paragraph3: PropTypes.string.isRequired,
-  paragraph4: PropTypes.string.isRequired,
+  paragraph4: PropTypes.string,
   buttonText: PropTypes.string.isRequired,
   buttonLink: PropTypes.string.isRequired,
   mediaType: PropTypes.oneOf(['image', 'video']).isRequired
 };
 
 export default Information;
+
 
