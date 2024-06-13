@@ -17,6 +17,7 @@ const ItemLoadingServices = lazy(() => import('../Services/ItemLoadingServices.j
 const PackingUnpacking = lazy(() => import('../Services/PackingUnpacking'));
 const AboutPage = lazy(() => import('../Nosotros/index.jsx'));
 const Contact = lazy(() => import('../Contact/index.jsx'));
+const NotFound = lazy(() => import('../PageNotFound/index.jsx'));
 
 // Componente para hacer scroll al inicio de la página en cambio de ruta
 const ScrollToTop = () => {
@@ -75,7 +76,7 @@ const App = () => {
             <Route path="/AboutUs" element={<AboutPage />} />
             <Route path="/ContactUS" element={<Contact />} />
             {/* Manejo de rutas no encontradas */}
-            {/* <Route component={NotFound} /> */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </React.Suspense>
       </Layout>

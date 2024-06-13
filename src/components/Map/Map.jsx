@@ -10,7 +10,7 @@ const Map = () => {
   useEffect(() => {
     if (!mapRef.current) {
       // Crea una instancia del mapa y asigna el ID del contenedor del mapa
-      const map = L.map('mapid').setView([33.9256381, -84.1276978],25);
+      const map = L.map('mapid').setView([33.9255381,-84.1275248],25);
 
       // Añade una capa de mapa base (por ejemplo, OpenStreetMap)
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -18,7 +18,7 @@ const Map = () => {
       }).addTo(map);
 
       // Añade un marcador
-      const marker = L.marker([33.9256381, -84.1276978], {
+      const marker = L.marker([33.9255381,-84.1275248], {
         icon: L.divIcon({
           className: 'custom-icon',
           html: ReactDOMServer.renderToString(<FaMapMarkerAlt color="red" size={32} />)

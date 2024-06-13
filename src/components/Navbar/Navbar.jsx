@@ -67,7 +67,7 @@ const NavBar = () => {
                                         <Link to="/my-service/apartment" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Apartment Moving</Link>
                                     </li>
                                     <li>
-                                        <Link to="/my-service/longDistanceMoving" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Long Disntance Moving</Link>
+                                        <Link to="/my-service/longDistanceMoving" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Long Distance Moving</Link>
                                     </li>
                                     <li>
                                         <Link to="/my-service/furniture-assembly" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Furniture Assembly</Link>

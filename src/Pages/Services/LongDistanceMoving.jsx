@@ -4,7 +4,8 @@ import Header from "../../components/Header/Header";
 import HeroSection from '../../components/Hero/Hero';
 import Information from '../../components/Information/Information';
 import GallerySection from "../../components/Gallery/Gallery";
-import LongDistanceMovingImg from "../../assets/LongDistanceMoving.jpg";
+import LongDistanceMovingImg from "../../assets/LongDistance.jpg";
+import LongDistanceImg from "../../assets/LongDistanceUs.jpg";
 import Footer from '../../components/Footer/Footer';
 
 const LongDistanceMoving = () => {
@@ -13,7 +14,7 @@ const LongDistanceMoving = () => {
       <Header />
       <Navbar />
       <HeroSection
-        backgroundImage={LongDistanceMovingImg}
+        backgroundImage={LongDistanceImg}
         title="Long Distance Moving"
         paragraph="While we specialize in moves within Atlanta, we are equally prepared and excited to assist with your long-distance relocations."
         buttonText="Call Us Now At 678-973-3935"

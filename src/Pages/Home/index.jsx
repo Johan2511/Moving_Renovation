@@ -6,7 +6,8 @@ import ContactSection from "../../components/ContactSection/ContactSection"
 import LocationList from '../../components/LocationList/LocationList'
 import Information from "../../components/Information/Information"
 import Footer from "../../components/Footer/Footer"
-import HeroI from "../../assets/Hero.jpg"
+import HeroIJPG from "../../assets/Hero.jpg"
+import HeroIWebP from "../../assets/Hero.webp"
 import MovingVideo from "../../assets/HomePage.mp4"
 import Service from "../../components/Service/Service"
 
@@ -30,12 +31,29 @@ const Home = () => {
         'Peachtree City, GA',
         'Newnan, GA'
       ];
+
+      // Función para determinar la compatibilidad con WebP
+    const supportsWebP = () => {
+        var elem = document.createElement('canvas');
+      
+        if (!!(elem.getContext && elem.getContext('2d'))) {
+          // Was able or not to get WebP representation
+          return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+        }
+      
+        // Very old browser like IE 8, canvas not supported
+        return false;
+      }
+  
+      // Determinar qué imagen cargar dependiendo del soporte de WebP
+      const backgroundImage = supportsWebP() ? HeroIWebP : HeroIJPG;
+
     return (
         <div>
             <Header />
             <Navbar />
             <HeroSection
-            backgroundImage={HeroI}
+            backgroundImage={backgroundImage}
             title="The better moving company in Atlanta "
             paragraph="We take maintaining our reputation very seriously by ensuring that all our customers enjoy a smooth and hassle-free moving process, and you can trust that our team will work tirelessly to ensure it is completed with the utmost professionalism."
             buttonText="Call Us Now At 678-973-3935"

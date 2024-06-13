@@ -62,9 +62,7 @@ const HeroSection = ({backgroundImage, title, paragraph, buttonText, buttonLink}
         <div className="lg:w-1/2 lg:justify-end">
           <LazyLoadImage
             src={backgroundImage}
-            alt=""
-            width={300}
-            height={300}
+            alt='Hero Background'
             effect="blur" // Aplicamos un efecto de desenfoque mientras carga la imagen
             threshold={10}
             className="hidden" // Ocultamos la imagen, ya que queremos que solo se cargue de manera diferida
