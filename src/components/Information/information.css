@@ -1,5 +1,5 @@
 .title-animation {
-    animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
   }
   
   @keyframes fadeIn {

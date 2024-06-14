@@ -4,6 +4,13 @@ import { PiHouseLineDuotone, PiBuildingApartmentDuotone, PiArmchair } from "reac
 import { RiTruckLine } from "react-icons/ri";
 import { FaMapMarkedAlt, FaTruckLoading } from "react-icons/fa";
 import { FaBoxesPacking } from "react-icons/fa6";
+import ResidentialImage from "../../assets/Hero.webp"
+import ApartmentImage from "../../assets/apartment_moving.webp"
+import CommercialImage from "../../assets/moving_comercial.webp"
+import LongDistanceImage from "../../assets/LongDistance.webp"
+import FurnitureImage from "../../assets/Assembly_moving.webp"
+import ItemJunkImage from "../../assets/ItemJunkMoving.webp"
+import PackingUnpackingImage from "../../assets/Packing.webp"
 import Preview from './Preview';
 
 const servicesData = [
@@ -13,7 +20,7 @@ const servicesData = [
     previewDescription: 'Arrive on time. Load. Unload. We make it that easy. Connect with the pros at Falcon Moving Atlanta if you\'re looking for local movers to assist you with your move to or from Atlanta.',
     slug: '/my-service/residential',
     icon: PiHouseLineDuotone,
-    image: '/src/assets/Hero.jpg' 
+    image: ResidentialImage
   },
   {
     title: 'Apartment Moving',
@@ -21,7 +28,7 @@ const servicesData = [
     previewDescription: 'Moving from the third floor to the third floor? Let our team handle the heavy lifting.',
     slug: '/my-service/apartment',
     icon: PiBuildingApartmentDuotone,
-    image: '/src/assets/apartment_moving.jpg'
+    image: ApartmentImage
   },
   {
     title: 'Commercial Moving',
@@ -29,7 +36,7 @@ const servicesData = [
     previewDescription: 'No office is too big or small. Our expert team handles every detail to ensure a smooth transition for your business..',
     slug: '/my-service/commercial',
     icon: RiTruckLine,
-    image: '/src/assets/moving_comercial.jpg'
+    image: CommercialImage
   },
   {
     title: 'Long Distance Moving',
@@ -37,7 +44,7 @@ const servicesData = [
     previewDescription:'While we specialize in moves within Atlanta, we are equally prepared and excited to assist with your long-distance relocations.',
     slug: '/my-service/longDistanceMoving',
     icon: FaMapMarkedAlt,
-    image: '/src/assets/LongDistanceMoving.jpg'
+    image: LongDistanceImage
   },
   {
     title: 'Furniture Assembly Moving',
@@ -45,7 +52,7 @@ const servicesData = [
     previewDescription:'We’re here to make your furniture assembly hassle-free. From beds to IKEA furniture, let us handle it for you.',
     slug: '/my-service/furniture-assembly',
     icon: PiArmchair,
-    image: '/src/assets/Assembly_moving.jpg'
+    image: FurnitureImage
   },
   {
     title: 'Item Junk Moving',
@@ -53,7 +60,7 @@ const servicesData = [
     previewDescription:'We specialize in the efficient and responsible removal of unwanted items, ensuring your space is clutter-free and clean.',
     slug: '/my-service/ItemLoadingServices',
     icon: FaTruckLoading,
-    image: '/src/assets/ItemJunkMoving.jpg'
+    image: ItemJunkImage
   },
   {
     title: 'Packing / Unpacking',
@@ -61,7 +68,7 @@ const servicesData = [
     previewDescription: 'Packing for a move can be challenging, but with our expert assistance, it becomes a seamless experience.',
     slug: '/my-service/packingUnpacking',
     icon: FaBoxesPacking,
-    image: '/src/assets/packing.jpg'
+    image: PackingUnpackingImage
   }
 ];
 

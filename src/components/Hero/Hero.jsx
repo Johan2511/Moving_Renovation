@@ -4,7 +4,7 @@ import Button from '../ButtonCall/ButtonCall';
 import { LazyLoadImage } from 'react-lazy-load-image-component'; // Importamos LazyLoadImage
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Importamos estilos predefinidos
 
-const HeroSection = ({backgroundImage, title, paragraph, buttonText, buttonLink}) => {
+const HeroSection = ({backgroundImage, title, paragraph, paragraph2, paragraph3, buttonText, buttonLink}) => {
 
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
@@ -52,11 +52,13 @@ const HeroSection = ({backgroundImage, title, paragraph, buttonText, buttonLink}
         minHeight: '80vh',
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-70"></div> {/* Superposición semitransparente */}
+      <div className="absolute inset-0 bg-black opacity-55"></div> {/* Superposición semitransparente */}
       <div className="container mx-auto px-5 py-24 lg:flex lg:flex-row flex-col items-center justify-start relative"> {/* Ajuste de clase flex y z-index */}
         <div className="lg:w-1/2 md:w-full w-full lg:pl-24 md:pl-16 flex flex-col md:items-start items-start text-left mb-16 lg:mb-0">
           <h1 ref={elementRef} className={`title-font text-center sm:text-5xl lg:text-6xl text-4xl mb-4 font-bold text-orange-600 ${isVisible ? 'title-animation' : ''}`} style={{textStroke: '1px black', WebkitTextStroke: '1px white'}} >{alternateColor(title)}</h1>
           <p className="text-justify mb-6 leading-relaxed font-medium text-base sm:text-2xl text-white">{paragraph}</p>
+          <p className="text-justify mb-6 leading-relaxed font-medium text-base sm:text-2xl text-white">{paragraph2}</p>
+          <p className="text-justify mb-6 leading-relaxed font-medium text-base sm:text-2xl text-white">{paragraph3}</p>
           <Button link={buttonLink} text={buttonText} />
         </div>
         <div className="lg:w-1/2 lg:justify-end">
@@ -77,6 +79,8 @@ HeroSection.propTypes = {
   backgroundImage: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   paragraph: PropTypes.string.isRequired,
+  paragraph2: PropTypes.string.isRequired,
+  paragraph3: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
   buttonLink: PropTypes.string.isRequired
 };
