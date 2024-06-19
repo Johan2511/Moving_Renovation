@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Button from '../ButtonCall/ButtonCall';
+import ShapeDivider from '../ShapeDivider/ShapeDivider';
 import './information.css';
 
 const Information = ({ 
@@ -67,6 +68,8 @@ const Information = ({
   };
 
   return (
+
+    <div className="App" style={{ position: 'relative' }}>
     <section className="body-font gradient-bg information-section" style={{backgroundImage: `url(${backgroundMedia})`}}>
       <div className="container mx-auto px-5 py-24 lg:flex lg:flex-row flex-col items-center justify-start">
         <div className="lg:w-1/2 md:w-full w-full lg:pl-24 md:pl-16 flex flex-col md:items-start items-start text-left mb-16 lg:mb-0 lg:mr-8">
@@ -82,6 +85,9 @@ const Information = ({
         </div>
       </div>
     </section>
+      <ShapeDivider />
+      </div>
+  
   );
 };
 

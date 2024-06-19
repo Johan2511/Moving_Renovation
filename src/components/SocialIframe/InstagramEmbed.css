@@ -1,0 +1,30 @@
+/* src/components/InstagramEmbed.css */
+.instagram-embed-container {
+    width: 320px; /* Ancho fijo del contenedor */
+    height: 500px; /* Altura fija del contenedor */
+    overflow-y: auto; /* Agrega scroll vertical si es necesario */
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+  }
+  
+  .instagram-embed-scroll-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .instagram-embed-item {
+    margin-bottom: 20px; /* Espacio entre publicaciones */
+  }
+  
+  .instagram-posts-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%; /* Opcional: ajusta la altura según sea necesario */
+  }
+  
+  
+  
+  

@@ -40,7 +40,7 @@ const ContactMethods = () => {
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                 <div className="max-w-xl space-y-3">
                 <h2 className="lg:text-7xl text-4xl text-orange-400 font-semibold mb-4">HOW TO REACH US</h2>
-                    <p className="lg:text-2xl">
+                    <p>
                     You may reach us through the following channels. We are open Monday-Friday from 8:00AM-6:00PM, Saturday from 9:00AM-5:00PM and Sunday from 9:00AM-4:00PM.
                     </p>
                 </div>

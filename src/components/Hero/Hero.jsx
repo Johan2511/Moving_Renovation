@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '../ButtonCall/ButtonCall';
 import { LazyLoadImage } from 'react-lazy-load-image-component'; // Importamos LazyLoadImage
 import 'react-lazy-load-image-component/src/effects/blur.css'; // Importamos estilos predefinidos
+import Form from '..//Form/Form2'
 
 const HeroSection = ({backgroundImage, title, paragraph, paragraph2, paragraph3, buttonText, buttonLink}) => {
 
@@ -70,6 +71,7 @@ const HeroSection = ({backgroundImage, title, paragraph, paragraph2, paragraph3,
             className="hidden" // Ocultamos la imagen, ya que queremos que solo se cargue de manera diferida
           />
         </div>
+      <Form />
       </div>
     </section>
   );
@@ -79,8 +81,8 @@ HeroSection.propTypes = {
   backgroundImage: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   paragraph: PropTypes.string.isRequired,
-  paragraph2: PropTypes.string.isRequired,
-  paragraph3: PropTypes.string.isRequired,
+  paragraph2: PropTypes.string,
+  paragraph3: PropTypes.string,
   buttonText: PropTypes.string.isRequired,
   buttonLink: PropTypes.string.isRequired
 };
