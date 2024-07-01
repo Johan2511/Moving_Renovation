@@ -71,7 +71,7 @@ const HeroSection = ({backgroundImage, title, paragraph, paragraph2, paragraph3,
             className="hidden" // Ocultamos la imagen, ya que queremos que solo se cargue de manera diferida
           />
         </div>
-      <Form />
+      {/* <Form /> */}
       </div>
     </section>
   );

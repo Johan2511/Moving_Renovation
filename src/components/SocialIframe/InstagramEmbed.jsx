@@ -16,6 +16,9 @@ const InstagramEmbed = ({ urls }) => {
               allow="encrypted-media; picture-in-picture; web-share; autoplay"
               allowFullScreen
               title={`Instagram Embed ${index}`}
+              onLoad={(e) => e.target.style.visibility = 'visible'}
+              onError={(e) => e.target.style.visibility = 'hidden'}
+              style={{ visibility: 'hidden' }}
             ></iframe>
           </div>
         ))}
@@ -25,5 +28,6 @@ const InstagramEmbed = ({ urls }) => {
 };
 
 export default InstagramEmbed;
+
 
 
